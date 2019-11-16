@@ -11,6 +11,7 @@ A sequencer for Monome norns based on [Conway's Game of Life](https://en.wikiped
 * ENC1: set speed (bpm)
 * ENC2: set play mode (see below)
 * ENC3: set play direction (see below)
+* hold KEY3 + ENC3: time jog
 
 ### Play Modes
 
@@ -33,6 +34,25 @@ Set the sequencing mode in the parameters screen. Default is semi-automatic.
 * manual: Press KEY2 to play the next step in the sequence for a single generation.
 * semi-automatic: Plays the sequence for a single generation (and loops it if "loop seq in semi-auto mode" is enabled (default)).
 * automatic: Like semi-automatic, but automatically calculates the next generation and plays it.
+
+## Crow support
+
+Zellen supports CV out via [Crow](https://monome.org/docs/crow/). Crow CV output can be configured in Norns's parameters menu.
+
+Crow configuration for Zellen:
+* Input 1: Clock
+* Input 2: CV offset
+* Output 1: CV
+* Output 2: Trigger
+* Output 3: Alternative CV
+* Output 4: Clock
+
+CV offset (input 2) can be set to pre or post quantization in the parameters menu.
+
+Alternative CV is, just like the main sequence, a CV derived from the current play position on the board. The CV can be calculated with these methods (configurable in the parameters menu):
+* x/y (default)
+* x%y
+* x+y (same as the main sequence)
 
 ## MIDI
 Set the MIDI channel (default: 1), MIDI velocity (default: 100), and MIDI clock in the parameters screen.
