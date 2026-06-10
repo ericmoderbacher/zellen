@@ -1,3 +1,6 @@
+Zellen is currently not in active development, since I do not own a Norns anymore. If anyone wants to take over, feel free to fork the repository and create a new thread for it in the [lines library](https://llllllll.co/c/library/18). If you do so, send me a message on lines and I will happily link your new repository here and in the old [lines thread](https://llllllll.co/t/zellen/21107).
+
+
 # zellen
 
 A sequencer for Monome norns based on [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).
@@ -44,15 +47,19 @@ Crow configuration for Zellen:
 * Input 2: CV offset
 * Output 1: CV
 * Output 2: Trigger
-* Output 3: Alternative CV
+* Output 3: CV 2
 * Output 4: Clock
 
 CV offset (input 2) can be set to pre or post quantization in the parameters menu.
 
-Alternative CV is, just like the main sequence, a CV derived from the current play position on the board. The CV can be calculated with these methods (configurable in the parameters menu):
+CV 2 is, just like the main sequence, a CV derived from the current play position on the board. The CV can be calculated with these methods (configurable in the parameters menu):
 * x/y (default)
 * x%y
 * x+y (same as the main sequence)
+
+## Just Friends support (via ii)
+
+Zellen supports playing notes on [Mannequins Just Friends](https://www.whimsicalraps.com/products/just-friends) via Crow and a ii connection. The note value can be determined with the same methods as the CV 2 value for Crow (configurable in the parameters menu).
 
 ## MIDI
 Set the MIDI channel (default: 1), MIDI velocity (default: 100), and MIDI clock in the parameters screen.
